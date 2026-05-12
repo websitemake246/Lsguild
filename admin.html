@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Lᴀsᴛ † Sᴛᴀɴᴅ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="admin-header">
+            <h1><i class="fas fa-crown"></i> Admin Dashboard</h1>
+            <button onclick="logout()" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+
+        <div class="login-form" id="loginForm">
+            <h2>Admin Login</h2>
+            <input type="text" id="adminUsername" placeholder="Username" class="input-field">
+            <input type="password" id="adminPassword" placeholder="Password" class="input-field">
+            <button onclick="adminLogin()" class="primary-btn">Login</button>
+            <p class="demo-creds">Demo: admin / admin123</p>
+        </div>
+
+        <div id="adminContent" style="display:none;">
+            <!-- User Management -->
+            <div class="admin-section">
+                <h2><i class="fas fa-users"></i> Create New Member Account</h2>
+                <div class="form-group">
+                    <input type="text" id="newUsername" placeholder="Username (e.g., 'hi')" class="input-field">
+                    <input type="password" id="newPassword" placeholder="Password" class="input-field">
+                    <input type="text" id="memberRole" placeholder="Role (Rusher/Support/Sniper/etc)" class="input-field">
+                    <textarea id="memberDesc" placeholder="Member Description (skills, rank, etc.)" class="input-field" rows="3"></textarea>
+                    <button onclick="createUser()" class="primary-btn"><i class="fas fa-user-plus"></i> Create User</button>
+                </div>
+            </div>
+
+            <!-- Add to Top 10 -->
+            <div class="admin-section">
+                <h2><i class="fas fa-list-ol"></i> Add/Edit Top 10 Players</h2>
+                <div class="form-group">
+                    <input type="text" id="playerName" placeholder="Player Name (without LS tag)" class="input-field">
+                    <input type="number" id="playerRank" placeholder="Rank (1-10)" class="input-field" min="1" max="10">
+                    <input type="text" id="playerRole" placeholder="Role (Rusher/Sniper/etc)" class="input-field">
+                    <textarea id="playerDesc" placeholder="Player description" class="input-field" rows="2"></textarea>
+                    <button onclick="addOrUpdatePlayer()" class="primary-btn"><i class="fas fa-plus-circle"></i> Add/Update Player</button>
+                    <button onclick="refreshPlayersList()" class="secondary-btn"><i class="fas fa-sync"></i> Refresh List</button>
+                </div>
+                <div class="players-preview" id="playersPreview"></div>
+            </div>
+
+            <!-- Manage Users List -->
+            <div class="admin-section">
+                <h2><i class="fas fa-id-card"></i> Registered Members</h2>
+                <div id="usersList" class="users-list-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
