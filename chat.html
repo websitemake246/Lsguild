@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guild Chat - Lᴀsᴛ † Sᴛᴀɴᴅ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="https://files.catbox.moe/e226hm.jpg" alt="Logo" class="chat-logo">
+            <div>
+                <h2>Lᴀsᴛ † Sᴛᴀɴᴅ Chat</h2>
+                <p id="currentUser">Not logged in</p>
+            </div>
+            <button onclick="location.href='index.html'" class="close-chat"><i class="fas fa-home"></i></button>
+        </div>
+
+        <div id="loginPrompt" class="chat-login">
+            <h3>Login to Chat</h3>
+            <input type="text" id="chatUsername" placeholder="Username" class="input-field">
+            <input type="password" id="chatPassword" placeholder="Password" class="input-field">
+            <button onclick="chatLogin()" class="primary-btn">Enter Chat</button>
+            <p class="note">Contact admin for credentials</p>
+        </div>
+
+        <div id="chatArea" style="display:none;">
+            <div class="messages-area" id="messagesArea">
+                <!-- Messages appear here -->
+            </div>
+            <div class="message-input-area">
+                <input type="text" id="messageInput" placeholder="Type your message..." class="message-input">
+                <button onclick="sendMessage()" class="send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
