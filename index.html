@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Lᴀsᴛ † Sᴛᴀɴᴅ | Free Fire Guild</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-toggle-wrapper">
+        <button id="themeToggle" class="theme-btn">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun" style="display:none"></i>
+        </button>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="guild-header">
+            <div class="guild-badge">
+                <img src="https://files.catbox.moe/e226hm.jpg" alt="Guild Logo" class="guild-logo">
+                <div class="guild-name-container">
+                    <h1 class="guild-name">Lᴀsᴛ † Sᴛᴀɴᴅ</h1>
+                    <p class="guild-tag">[LS] • Elite Free Fire Guild</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leader Section -->
+        <div class="leader-section">
+            <div class="leader-card">
+                <i class="fas fa-crown"></i>
+                <h3>GUILD LEADER</h3>
+                <h2>CRYONIX</h2>
+                <p>📱 +2348135468657</p>
+                <button class="copy-btn" onclick="copyToClipboard('08135468657')">
+                    <i class="fas fa-copy"></i> Copy UID
+                </button>
+            </div>
+            <div class="leader-card">
+                <i class="fas fa-user-shield"></i>
+                <h3>ACTING LEADER</h3>
+                <h2>Not Available Yet</h2>
+            </div>
+            <div class="leader-card">
+                <i class="fas fa-fist-raised"></i>
+                <h3>WAR LEADER</h3>
+                <h2>Not Available Yet</h2>
+            </div>
+        </div>
+
+        <!-- Top 10 Players -->
+        <div class="section-title">
+            <i class="fas fa-trophy"></i>
+            <h2>TOP 10 BEST PLAYERS</h2>
+        </div>
+        <div class="players-grid" id="playersGrid">
+            <!-- Players will be loaded here from JSON -->
+        </div>
+
+        <!-- Challenge Section -->
+        <div class="challenge-card">
+            <i class="fas fa-skull-crossbones"></i>
+            <p>Want to overrule? <strong>Challenge them 1v1!</strong></p>
+        </div>
+
+        <!-- Rules Section -->
+        <div class="section-title">
+            <i class="fas fa-gavel"></i>
+            <h2>RULES & REGULATIONS</h2>
+        </div>
+        <div class="rules-list">
+            <div class="rule-item">
+                <i class="fas fa-gamepad"></i>
+                <span>You must be active in game to avoid getting kicked</span>
+            </div>
+            <div class="rule-item">
+                <i class="fas fa-user-tie"></i>
+                <span>Respect all admins to avoid getting kicked</span>
+            </div>
+            <div class="rule-item">
+                <i class="fas fa-fist-raised"></i>
+                <span>Violence is allowed but know your limit and stop when asked</span>
+            </div>
+            <div class="rule-item">
+                <i class="fas fa-ban"></i>
+                <span>Porn stickers or any form of porn are NOT allowed</span>
+            </div>
+            <div class="rule-item">
+                <i class="fas fa-chalkboard-user"></i>
+                <span>Be active for guild training to improve gameplay</span>
+            </div>
+            <div class="rule-item">
+                <i class="fas fa-store"></i>
+                <span>No selling of accounts in the GC</span>
+            </div>
+        </div>
+
+        <!-- Join Section -->
+        <div class="join-section">
+            <h3>Join Our Community</h3>
+            <a href="https://chat.whatsapp.com/DQGe3KmSAi4B22FLdANdL6" target="_blank" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+            </a>
+            <button class="chat-btn" onclick="location.href='chat.html'">
+                <i class="fas fa-comments"></i> Guild Chat Room
+            </button>
+        </div>
+
+        <!-- Admin Login -->
+        <div class="admin-login">
+            <button onclick="location.href='admin.html'" class="admin-link">
+                <i class="fas fa-lock"></i> Admin Panel
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
